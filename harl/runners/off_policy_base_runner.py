@@ -97,12 +97,15 @@ class OffPolicyBaseRunner:
         )
 
         self.action_spaces = self.envs.action_space
-        for agent_id in range(self.num_agents):
-            self.action_spaces[agent_id].seed(algo_args["seed"]["seed"] + agent_id + 1)
-
+        
         print("share_observation_space: ", self.envs.share_observation_space)
         print("observation_space: ", self.envs.observation_space)
         print("action_space: ", self.envs.action_space)
+        
+        for agent_id in range(self.num_agents):
+            self.action_spaces[agent_id].seed(algo_args["seed"]["seed"] + agent_id + 1)
+
+        
 
         if self.share_param:
             self.actor = []
