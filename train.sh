@@ -1,0 +1,1 @@
+python train.py --algo hasac --env werewolf --exp_name test
