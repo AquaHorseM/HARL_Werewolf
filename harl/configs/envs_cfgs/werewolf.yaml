@@ -1,0 +1,5 @@
+"scenario": " "basic_scenario",
+"num_players": 7,
+"player_config_path": "MafiaGPT_RL/configs/player_configs_v01.json",
+"openai_client": "MafiaGPT_RL/openai_config.yaml",
+"data_path": "MafiaGPT_RL/data/",
