@@ -19,6 +19,7 @@ class WerewolfEnv:
         self.env = WerewolfGameEnv(id = self.id, train = True, openai_client = self.openai_client, data_path = self.data_path)
         
         self.env.set_players(player_configs)
+        self.env.init_env()
         self.n_agents = env_num_agents[self.scenario] if self.scenario in env_num_agents else env_num_agents["basic_scenario"]
         self.share_observation_space = self.env.shared_observation_space
         self.observation_space = self.env.observation_space
